@@ -20,7 +20,10 @@ namespace Listr.MySQL
                 conn.Close();
             }
         }
+
         private Connection conn { get; }
+
+        private List<ListrLike> Children {get; set;}
 
         public Listr(Guid id, string connString) : this(id, new Connection(connString)) { }
 
@@ -109,5 +112,4 @@ namespace Listr.MySQL
 
 
     }
-    public GetChi
 }
